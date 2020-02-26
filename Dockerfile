@@ -3,7 +3,7 @@ FROM openjdk:8-jre
 FROM ubuntu:18.04
 
 LABEL maintainer Raffaele Porzio <r.porzio75@gmail.com>
-
+RUN apt update
 RUN apt install -y git
 
 # DB Drivers
