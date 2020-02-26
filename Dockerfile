@@ -5,6 +5,7 @@ FROM ubuntu:18.04
 LABEL maintainer Raffaele Porzio <r.porzio75@gmail.com>
 RUN apt update
 RUN apt install -y git
+RUN apt install -y curl
 
 # DB Drivers
 # Install MariaDB (MySQL) and PostgreSQL JDBC Drivers for users that would like have them in the container
