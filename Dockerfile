@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-FROM liquibase/liquibase
+FROM ubuntu:18.04
 
 LABEL maintainer Raffaele Porzio <r.porzio75@gmail.com>
 
