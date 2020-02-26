@@ -4,12 +4,7 @@ FROM liquibase/liquibase
 
 LABEL maintainer Raffaele Porzio <r.porzio75@gmail.com>
 
-RUN apk --update add git less openssh && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm /var/cache/apk/*
-
-VOLUME /git
-WORKDIR /git
+RUN apt install -y git
 
 # DB Drivers
 # Install MariaDB (MySQL) and PostgreSQL JDBC Drivers for users that would like have them in the container
