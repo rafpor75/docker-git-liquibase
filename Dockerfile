@@ -11,7 +11,7 @@ RUN apk --update add git less openssh && \
 VOLUME /git
 WORKDIR /git
 
-
+# DB Drivers
 # Install MariaDB (MySQL) and PostgreSQL JDBC Drivers for users that would like have them in the container
 RUN apt-get update \
   && apt-get install -yq --no-install-recommends \
