@@ -1,6 +1,7 @@
 FROM openjdk:8-jre
-
 LABEL maintainer Raffaele Porzio <r.porzio75@gmail.com>
+
+
 # DB Drivers
 # Install MariaDB (MySQL) and PostgreSQL JDBC Drivers for users that would like have them in the container
 
@@ -12,7 +13,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/*/apt/*
 RUN apt-get install bash 
-RUN apt-get install git 
+RUN apt install -y git
 RUN apt-get install curl
 # /usr/share/java/mariadb-java-client.jar
 # /usr/share/java/postgresql.jar
