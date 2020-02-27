@@ -1,5 +1,3 @@
-FROM openjdk:8-jre
-
 FROM ubuntu:18.04
 
 LABEL maintainer Raffaele Porzio <r.porzio75@gmail.com>
@@ -7,8 +5,10 @@ RUN apt update
 RUN apt install -y git
 RUN apt install -y curl
 
+FROM openjdk:8-jre
 # DB Drivers
 # Install MariaDB (MySQL) and PostgreSQL JDBC Drivers for users that would like have them in the container
+
 RUN apt-get update \
   && apt-get install -yq --no-install-recommends \
       libmariadb-java \

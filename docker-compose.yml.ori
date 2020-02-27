@@ -1,0 +1,13 @@
+version: '2'
+services:
+web:
+  image: rafpor75/docker-git-liquibase:latest
+  depends_on:
+    - liquibase
+    - git
+
+liquibase:
+  image: liquibase/liquibase:latest
+
+git:
+  image: alpine/git:latest
