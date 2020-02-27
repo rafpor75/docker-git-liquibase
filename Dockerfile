@@ -13,7 +13,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/*/apt/*
 RUN apt-get install bash 
-RUN apt install -y git
+RUN apt-get update && apt-get install -y git
 RUN apt-get install curl
 # /usr/share/java/mariadb-java-client.jar
 # /usr/share/java/postgresql.jar
